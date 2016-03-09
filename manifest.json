@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Reddit Redirector",
+  "description": "This extension redirects when you visit reddit",
+  "version": "1.0",
+
+  "icons": { "128": "icon128.png" },
+
+//removing the browser action will remove the icon
+
+
+
+  // limited access to apis
+  "content_scripts": [
+  {
+  "matches": ["https://www.reddit.com/*"],
+  "js":["myScript.js"]
+  },
+  {
+    "matches":["https://www.facebook.com/*"],
+    "js":["myScript1.js"]
+  }
+
+
+ ] 
+}
